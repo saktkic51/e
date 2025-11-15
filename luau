@@ -1,3 +1,4 @@
+--[[
 local URL = "https://raw.githubusercontent.com/LightStrikeVex/testy/main/idk"
 local response = game:HttpGet(URL, true)
 if response and string.find(response, "true") then
@@ -6,12 +7,14 @@ else
     print("ask ur owner vex for perms lol")
     return
 end
+]]
 local Players = game:GetService("Players")
 local plr = Players.LocalPlayer
-if not plr:IsInGroup(35642989) or plr:GetRankInGroup(35642989) ~= 2 then
+--[[if not plr:IsInGroup(35642989) or plr:GetRankInGroup(35642989) ~= 2 then
     print("ask ur owner vex for perms lol")
     return
 end
+]]
 for _, v in getgc(false) do
     if type(v) == "function" and debug.info(v, "n") == "UpdateMinimap" then
         local hook; hook = hookfunction(v, newcclosure(function(...)
