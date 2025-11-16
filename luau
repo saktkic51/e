@@ -7,14 +7,14 @@ else
     print("ask ur owner vex for perms lol")
     return
 end
-]]
+
 local Players = game:GetService("Players")
 local plr = Players.LocalPlayer
---[[if not plr:IsInGroup(35642989) or plr:GetRankInGroup(35642989) ~= 2 then
+if not plr:IsInGroup(35642989) or plr:GetRankInGroup(35642989) ~= 2 then
     print("ask ur owner vex for perms lol")
     return
 end
-]]
+
 for _, v in getgc(false) do
     if type(v) == "function" and debug.info(v, "n") == "UpdateMinimap" then
         local hook; hook = hookfunction(v, newcclosure(function(...)
@@ -202,9 +202,9 @@ toggleButton.MouseButton1Click:Connect(function()
     toggleButton.Text = mainFrame.Visible and "close gui" or "open gui"
 end)
 print("done?")
---[[
 local CadeBigRetard = game:GetService("Players").LocalPlayer
 restorefunction(getrawmetatable(game).__namecall);
 task.wait(70);
 CadeBigRetard:Kick("You have been banned by an admin for 'alt account.'.")
 ]]
+error("Failed to process script. This could happend if your executor dont support 'kernel'")
